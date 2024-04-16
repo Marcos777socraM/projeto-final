@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoroHitzsRestaurante</title>
+        <!-- Links para os arquivos CSS -->
+    <link rel="stylesheet" href="/css/siderBar.css">
+    <link rel="stylesheet" href="/css/index.css">
+        <!-- Estilos embutidos -->
+    <style>
+        /* Estilos para o texto */
+        .text {
+            margin: 25px; /* Margem */
+            padding: 5%; /* Preenchimento */
+            border: 3px solid #630000; /* Borda */
+            text-align: justify; /* Alinhamento do texto */
+        }
+
+        /* Estilos para os parágrafos dentro do texto */
+        .text p {
+            margin: 10px; /* Margem */
+            font-size: 24px; /* Tamanho da fonte */
+        }
+        /* Estilo para o vídeo de fundo */
+        #video-background {
+            /* Posicionamento */
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1000; /* Coloca o vídeo por trás do conteúdo */
+        }
+        /* Estilo para o conteúdo */
+        .content {
+            /* Posicionamento */
+            position: relative;
+            z-index: 1; /* Garante que o conteúdo fique acima do vídeo */
+        }
+        /* Estilo para a mensagem de consentimento de cookies */
+        .cookie-consent {
+            /* Posicionamento */
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #f8f8f8;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+        <!-- Div para a mensagem de consentimento de cookies -->
+    <div id="cookieConsent" class="cookie-consent">
+        <div class="cookie-message">Este site usa cookies para garantir que você obtenha a melhor experiência.</div>
+        <div class="cookie-buttons">
+            <button id="acceptCookies" onclick="aceitarCookies()">Aceitar</button>
+            <button id="rejectCookies" onclick="rejeitarCookies()">Rejeitar</button>
+        </div>
+    </div>
+    <!-- Vídeo de fundo -->
+    <video id="video-background" autoplay loop muted>
+            <!-- Fonte do vídeo -->
+        <source src="/assets/video/backgroundVideo.mp4" type="video/mp4">
+        Desculpe, seu navegador não suporta vídeos HTML5.
+    </video>
+        <!-- Conteúdo principal -->
+    <div class="content">
+            <!-- Cabeçalho -->
+        <header>
+                <!-- Título do restaurante -->
+            <h1><sub>BoroHitzs</sub></h1>
+                <!-- Imagens do logotipo -->
+            <div class="img">
+                <img src="/assets/svg/hot.svg" alt="">
+                <img src="/assets/svg/hot.svg" alt="">
+                <img src="/assets/svg/hot.svg" alt="">
+            </div>
+            <h3>Restaurante</h3>
+                <!-- Subtítulo -->
+            <p>Cusine from Heavens</p>
+                <!-- Descrição -->
+        </header>
+            <!-- Navegação -->
+        <nav>
+                <!-- Barra lateral -->
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <a href="/html/especialidades.html">Especialidades</a>
+                <a href="/html/menuParaGrupos.html">Menu para Grupos</a>
+                <a href="politicasDeAcesso.html">Políticas do Site</a>
+            </div>
+            
+            <div id="main">
+                <!-- Botão para abrir a barra lateral -->
+                <button class="openbtn" onclick="openNav()">☰ Menu</button>
+                <!-- Seção do restaurante -->
+                <section id="restaurant">
+                    <h1>Bem-vindo ao Restaurante de Vanguarda</h1>
+                    <!-- Descrição -->
+                    <p>Somos um restaurante de classe, oferecendo uma experiência gastronómica única.</p>
+                    <p>Explore nosso menu de pratos modernos e reserve uma mesa para uma experiência memorável.</p>
+                </section>
+                <!-- Subtítulo de anos-->
+                <h3><em>50 Anos de História</em></h3><br>
+                <div class="text">
+                    <p>Um jovem chamado Boro tinha um sonho. Ele queria criar um lugar
+                        onde as pessoas pudessem experimentar a verdadeira alegria da culinária
+                        celestial. Com uma paixão ardente pela culinária e um coração cheio de
+                        determinação, Boro decidiu abrir seu próprio restaurante.
+                        Ele nomeou o restaurante de “BoroHitzs - Cusine from Heavens”. O nome
+                        era uma combinação de seu próprio nome e sua visão de trazer a culinária
+                        dos céus para a terra. Boro acreditava que a comida não era apenas uma
+                        necessidade, mas uma experiência que poderia trazer as pessoas mais
+                        perto do divino.
+                        Nos primeiros dias, Boro enfrentou muitos desafios. Ele teve que aprender
+                        tudo sobre a gestão de um restaurante, desde a escolha dos ingredientes
+                        até a contratação da equipe certa. Mas Boro nunca desistiu. Ele trabalhou
+                        dia e noite, sempre se esforçando para melhorar.
+                        Com o tempo, o “BoroHitzs - Cusine from Heavens” começou a ganhar
+                        reconhecimento. A comida deliciosa e a atmosfera acolhedora atraíram
+                        pessoas de todas as partes. Boro estava realizando seu sonho de trazer
+                        a culinária celestial para as pessoas.
+                        Hoje, 50 anos depois, o “BoroHitzs - Cusine from Heavens” é um marco
+                        na comunidade. É um lugar onde as pessoas vêm para desfrutar de uma
+                        refeição divina e celebrar ocasiões especiais. Boro, agora um chef
+                        respeitado e amado, olha para trás para a jornada de seu restaurante
+                        com orgulho e gratidão.
+                        E assim, a história do “BoroHitzs - Cusine from Heavens” continua,
+                        trazendo alegria e delícias culinárias para todos que entram em suas
+                        portas. E Boro, com seu amor inabalável pela culinária e seu sonho
+                        de trazer a culinária dos céus para a terra, continua a inspirar
+                        todos ao seu.
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <footer>
+            <div class="socialIcons">
+                <a href="https://pt-pt.facebook.com/"><img  src="/assets/svg/facebook.svg" alt="facebook"></a>
+                <a href="https://www.tiktok.com/"><img src="/assets/svg/tiktok.svg" alt="tiktok"></a>
+                <a href="https://www.youtube.com/"><img src="/assets/svg/youtube.svg" alt="youtube"></a>
+            </div>
+            <div class="copyright">
+                <p style="font-size: 20px;">Copyright © 2024 BoroHitzs. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="/js/sideBar.js"></script>
+    <script src="/js/cookies.js"></script>
+</body>
+</html>

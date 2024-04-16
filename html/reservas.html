@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoroHitzsRestaurante</title>
+        <!-- Links para os arquivos CSS -->
+    <link rel="stylesheet" href="/css/siderBar.css">
+    <link rel="stylesheet" href="/css/index.css">
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    
+    <script src="/js/index.js"></script>
+
+    <script>
+        (function(){
+            emailjs.init({
+            publicKey: "ylTzcxZM8_Pr_XsGP",
+            });
+        })();
+    </script>
+
+<style>
+    .col-md {
+        color: aliceblue;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    /* Estilos para o formulário de contato */
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+    }
+
+    .col {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group h5 {
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
+
+    .form-control {
+        width: 95%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    #message {
+        height: 100px;
+        resize:horizontal;
+    }
+
+    .btn {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+    #localizacao h2, p{
+        color: aliceblue;
+    }
+</style>
+</head>
+<body>
+        <!-- Conteúdo principal -->
+    <div class="content">
+            <!-- Cabeçalho -->
+        <header>
+                <!-- Título do restaurante -->
+            <h1><sub>BoroHitzs</sub></h1>
+                <!-- Imagens do logotipo -->
+            <div class="img">
+                <img src="/assets/svg/hot.svg" alt="">
+                <img src="/assets/svg/hot.svg" alt="">
+                <img src="/assets/svg/hot.svg" alt="">
+            </div>
+            <h3>Restaurante</h3>
+                <!-- Subtítulo -->
+            <p>Cusine from Heavens</p>
+                <!-- Descrição -->
+        </header>
+            <!-- Navegação -->
+        <nav>
+                <!-- Barra lateral -->
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <a href="/html/especialidades.html">Especialidades</a>
+                <a href="/html/menuParaGrupos.html">Menu para Grupos</a>
+                <a href="politicasDeAcesso.html">Políticas do Site</a>
+            </div>
+            <div id="main">
+                <!-- Botão para abrir a barra lateral -->
+                <button class="openbtn" onclick="openNav()">☰ Menu</button>
+                <!-- Seção do restaurante -->
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <h1>Contacto para Reservas, Críticas e Sugestões</h1>    
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <h5>Name</h5>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="name"
+                            placeholder="Enter your name"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <h5>Email</h5>
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            placeholder="Enter your email"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <h5>Message</h5>
+                        <textarea id="message" rows="3" class="form-control"></textarea>
+                    </div>
+                    <button class="btn" onclick="sendMail()">Submit</button>
+                </div>
+            </div>
+        </div>
+        <div id="localizacao">
+            <h2>Localização</h2>
+            <p>Endereço: Rua Exemplo, 123 - Cidade, País</p>
+            <p>Telefone de Contato: +351 986909009</p><br>
+            <!-- Mapa Google Maps -->
+            <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+                <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div><script>(function () {
+                var setting = {"query":"Praça Marquês de Pombal, Lisboa, Portugal","width":800,"height":600,"satellite":false,"zoom":12,"placeId":"EitQcmHDp2EgTWFycXXDqnMgZGUgUG9tYmFsLCBMaXNib2EsIFBvcnR1Z2FsIi4qLAoUChIJ18lF4nYzGQ0RNOFiQTbQUB8SFAoSCTvz5GEaMxkNEdA2kOS96wAE","cid":"0x1f50d0364162e134","coords":[38.7256734,-9.149149399999999],"cityUrl":"/portugal/lisbon","cityAnchorText":"Mapa de Lisboa, Lisbon Region , Portugal","lang":"pt","queryString":"Praça Marquês de Pombal, Lisboa, Portugal","centerCoord":[38.7256734,-9.149149399999999],"id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"1094723"};
+                var d = document;
+                var s = d.createElement('script');
+                s.src = 'https://1map.com/js/script-for-user.js?embed_id=1094723';
+                s.async = true;
+                s.onload = function (e) {
+                    window.OneMap.initMap(setting)
+                };
+                var to = d.getElementsByTagName('script')[0];
+                to.parentNode.insertBefore(s, to);
+                })();</script><a href="https://1map.com/pt/map-embed">1 Map</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="socialIcons">
+            <a href="https://pt-pt.facebook.com/"><img  src="/assets/svg/facebook.svg" alt="facebook"></a>
+            <a href="https://www.tiktok.com/"><img src="/assets/svg/tiktok.svg" alt="tiktok"></a>
+            <a href="https://www.youtube.com/"><img src="/assets/svg/youtube.svg" alt="youtube"></a>
+        </div>
+        <div class="copyright">
+            <p style="font-size: 20px;">Copyright © 2024 BoroHitzs. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="/js/sideBar.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+
+ul {
+  list-style-type: none;
+}
+ul #myUL {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.caret {
+  cursor: pointer;
+  -webkit-user-select: none;
+    -moz-user-select: none;
+          user-select: none;
+}
+.caret .caret::before {
+  content: "▶";
+  display: inline-block;
+  margin: 6px;
+}
+.caret .caret-down::before {
+  transform: rotate(90deg);
+}
+.caret h3 {
+  transition: color 0.5s ease; /* Adiciona uma transição suave */
+}
+.caret h3:hover {
+  color: #765038; /* Cor do texto ao passar o mouse */
+}
+
+.nested {
+  display: none;
+}
+
+.active {
+  display: block;
+}

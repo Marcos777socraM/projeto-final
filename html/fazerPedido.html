@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>BoroHitzsRestaurante</title>
+
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/siderBar.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        main {
+            padding: 20px;
+            background-color: aliceblue;
+        }
+
+        h2 {
+            font-size: 32px;
+            text-align: center;
+        }
+
+        .productArea {
+            justify-content: space-around;
+        }
+        .productArea div {
+            display: flex;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            margin: 10px;
+            width:auto;
+            border-radius: 20px;
+            align-content: space-around;
+            align-self: center;
+            grid-template-columns: repeat(3, 1fr);
+            
+        }
+
+        .productItem {
+            width: auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            text-align: center;
+            align-content: space-around;
+            flex-direction: column;
+            
+        }
+
+        .productItem img {
+            max-width: 50%;
+            width: 200px;
+            height: auto;
+            border-radius: 20%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .productItemName {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .productItemDescription {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .productItemPrice {
+            font-size: 16px;
+            color: #ac0101e1;
+            margin-bottom: 5px;
+        }
+
+        .productItemAdd {
+            background-color: #ac0101e1;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .productItemAdd:hover {
+            background-color: #ac0101e1;
+        }
+
+        .cart {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        .cartItem {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #ccc;
+            padding: 5px 0;
+        }
+
+        .cartItem img {
+            max-width: 40px;
+            height: auto;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+
+        .cartItemName {
+            font-size: 16px;
+            margin-right: auto;
+        }
+
+        .cartItemQtArea {
+            display: flex;
+            align-items: center;
+        }
+
+        .cartItemQtMinus,
+        .cartItemQtPlus {
+            background-color: #ac0101e1;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .cartItemQtMinus:hover,
+        .cartItemQtPlus:hover {
+            background-color: #ac0101e1;
+        }
+
+        .cartItemQt {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0 5px;
+        }
+
+        .cartTotalItem {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .cartEnd {
+            background-color: #ac0101e1;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .cartEnd:hover {
+            background-color: #ac0101e1;
+        }
+
+        .discountButton {
+            background-color: #ac0101e1;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 10px;
+        }
+        .discountButton:hover {
+            background-color: #ac0101e1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><sub>BoroHitzs</sub></h1>
+        <div class="img">
+            <img src="/assets/svg/hot.svg" alt="">
+            <img src="/assets/svg/hot.svg" alt="">
+            <img src="/assets/svg/hot.svg" alt="">
+        </div>
+        <h3>Restaurante</h3>
+        <p>Cusine from Heavens</p>
+    </header>
+    <nav>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="/html/index.html">Restaurante</a>
+            <a href="/html/especialidades.html">Especialidades</a>
+            <a href="/html/menuParaGrupos.html">Menu para Grupos</a>
+            <a href="/html/politicasDeAcesso.html">Políticas de Acesso</a>
+        </div>
+        <div id="main">
+            <button class="openbtn" onclick="openNav()">☰ Menu</button>
+            <h3>Ementa</h3>
+        </div>
+    </nav>
+
+    <main>
+        <h2>TakeWay</h2>
+        <br>
+        <div class="productArea">
+            <!-- Produtos de Carnes -->
+            <h2>Carnes</h2>
+            <div class="products-carnes">
+                <!-- Produtos de Carnes serão preenchidos aqui -->
+            </div>
+                <!-- Produtos de Peixes -->
+            <h2>Peixes</h2>
+            <div class="products-peixes">
+                <!-- Produtos de Peixes serão preenchidos aqui -->
+            </div>
+                <!-- Produtos de Risottos -->
+            <h2>Risottos</h2>
+            <div class="products-risottos">
+                <!-- Produtos de Risottos serão preenchidos aqui -->
+            </div>
+                <!-- Produtos de Drinks -->
+            <h2>Drinks</h2>
+            <div class="products-drinks">
+                <!-- Produtos de Drinks serão preenchidos aqui -->
+            </div>
+                <!-- Produtos de Vinhos -->
+            <h2>Vinhos</h2>
+            <div class="products-vinhos">
+                <!-- Produtos de Vinhos serão preenchidos aqui -->
+        </div>
+    </div>
+    </main>
+
+    <aside>
+        <div class="cart">
+            <h2>Seus Pedidos</h2>
+            <div class="cartItems"></div>
+            <div class="cartTotalItem">
+                <span>Subtotal:</span>
+                <span class="subtotal">€ --</span>
+            </div>
+            <div class="cartTotalItem">
+                <span>Desconto:</span>
+                <span class="discount">€ --</span>
+            </div>
+            <div class="cartTotalItem">
+                <span>Total:</span>
+                <span class="total">€ --</span>
+            </div>
+            <button class="cartEnd">Finalizar a compra</button>
+            <button class="discountButton">Aplicar desconto</button>
+        </div>
+    </aside>
+    <footer>
+        <div class="socialIcons">
+            <a href="https://pt-pt.facebook.com/"><img  src="/assets/svg/facebook.svg" alt="facebook"></a>
+            <a href="https://www.tiktok.com/"><img src="/assets/svg/tiktok.svg" alt="tiktok"></a>
+            <a href="https://www.youtube.com/"><img src="/assets/svg/youtube.svg" alt="youtube"></a>
+        </div>
+        <div class="copyright">
+            <p>
+                Copyright © 2024 BoroHitzs. Todos os direitos reservados.
+            </p>.
+        </div>
+    </footer>
+    <script src="/js/ementa.js"></script>
+    <script>
+function renderProductsByCategory(category) {
+    const categoryElement = document.querySelector(`.products-${category.toLowerCase()}`);
+    categoryElement.innerHTML = "";
+    const productsInCategory = products.filter(product => product.category === category);
+    productsInCategory.forEach(product => {
+        const productElement = document.createElement("div");
+        productElement.classList.add("productItem");
+        productElement.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+            <div class="productItemName">${product.name}</div>
+            <div class="productItemDescription">${product.description}</div>
+            <div class="productItemPrice">€ ${product.price.toFixed(2)}</div>
+            <button class="productItemAdd" data-id="${product.id}">Adicionar ao carrinho</button>
+        `;
+        categoryElement.appendChild(productElement);
+    });
+}
+
+// Renderiza os produtos por categoria
+["Carnes", "Peixes", "Risottos", "Drinks", "Vinhos"].forEach(category => {
+    renderProductsByCategory(category);
+});
+
+
+        const productArea = document.querySelector(".productArea");
+        const cartItems = document.querySelector(".cartItems");
+        const subtotalElement = document.querySelector(".subtotal");
+        const discountElement = document.querySelector(".discount");
+        const totalElement = document.querySelector(".total");
+        const discountButton = document.querySelector(".discountButton");
+
+        const cart = [];
+
+        function renderCart() {
+            cartItems.innerHTML = "";
+            let subtotal = 0;
+
+            cart.forEach(item => {
+                const product = products.find(prod => prod.id === item.id);
+                const itemElement = document.createElement("div");
+                itemElement.classList.add("cartItem");
+                itemElement.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}">
+                    <div class="cartItemInfo">
+                        <div class="cartItemName">${product.name}</div>
+                        <div class="cartItemDescription">${product.description}</div>
+                    </div>
+                    <div class="cartItemQtArea">
+                        <button class="cartItemQtMinus" data-id="${product.id}">-</button>
+                        <div class="cartItemQt">${item.quantity}</div>
+                        <button class="cartItemQtPlus" data-id="${product.id}">+</button>
+                    </div>
+                    <div>€ ${(product.price * item.quantity).toFixed(2)}</div>
+                `;
+                cartItems.appendChild(itemElement);
+                subtotal += product.price * item.quantity;
+
+                
+            });
+            subtotalElement.textContent = `€ ${subtotal.toFixed(2)}`;
+            // Lógica de desconto (se necessário)
+            const discount = 0;
+            discountElement.textContent = `€ ${discount.toFixed(2)}`;
+            const total = subtotal - discount;
+            totalElement.textContent = `€ ${total.toFixed(2)}`;
+        }
+
+        function applyDiscount() {
+            const discountCode = prompt("Digite o código de desconto:");
+            // Aqui você pode adicionar lógica para verificar o código de desconto e aplicar o desconto correspondente
+            alert("Código de desconto aplicado com sucesso!");
+            renderCart();
+        }
+
+        discountButton.addEventListener("click", applyDiscount);
+
+        
+
+        productArea.addEventListener("click", event => {
+            if (event.target.classList.contains("productItemAdd")) {
+                const productId = parseInt(event.target.getAttribute("data-id"));
+                const cartItem = cart.find(item => item.id === productId);
+                if (cartItem) {
+                    cartItem.quantity++;
+                } else {
+                    cart.push({ id: productId, quantity: 1 });
+                }
+                renderCart();
+            }
+        });
+
+        cartItems.addEventListener("click", event => {
+            if (event.target.classList.contains("cartItemQtMinus")) {
+                const productId = parseInt(event.target.getAttribute("data-id"));
+                const cartItem = cart.find(item => item.id === productId);
+                if (cartItem && cartItem.quantity > 1) {
+                    cartItem.quantity--;
+                }
+                renderCart();
+            } else if (event.target.classList.contains("cartItemQtPlus")) {
+                const productId = parseInt(event.target.getAttribute("data-id"));
+                const cartItem = cart.find(item => item.id === productId);
+                if (cartItem) {
+                    cartItem.quantity++;
+                }
+                renderCart();
+            }
+        });
+
+        document.querySelector(".cartEnd").addEventListener("click", () => {
+            // Finaliza a compra
+            alert("Compra finalizada!");
+        });
+
+        renderCart(); // Renderiza o carrinho inicialmente
+    </script>
+    <script src="/js/sideBar.js"></script>
+    
+</body>
+</html>

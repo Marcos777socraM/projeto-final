@@ -1,0 +1,114 @@
+/* Importando fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap'); /* Importa a fonte Lato com diferentes pesos e estilos */
+@import url('https://fonts.googleapis.com/css2?family=Garamond&display=swap'); /* Importa a fonte Garamond */
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap'); /* Importa a fonte Allura */
+
+/* Resetando margens e preenchimentos para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para o corpo do documento HTML */
+body {
+    height: auto; /* Altura automática para se ajustar ao conteúdo */
+    display: flex; /* flexbox para o layout */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    align-items: center; /* Centraliza os itens verticalmente */
+    background-color: black; /* Define a cor de fundo */
+}
+
+/* Estilos para o cabeçalho */
+header {
+    text-align: center; /* Centraliza o texto */
+    color: aliceblue; /* Cor do texto */
+    font-family: 'Lato' sans-serif; /* Define a fonte */
+    padding: 15px 10px; /* Preenchimento */
+}
+
+/* Estilos para os títulos dentro do cabeçalho */
+header h1 {
+    display: flex; /* flexbox para o layout */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    font-size: 82px; /* Tamanho da fonte */
+    color: rgba(252, 185, 18, 0.5764705882); /* Cor do texto com transparência */
+    text-shadow: 1px 1px rgba(255, 107, 21, 0.959); /* Sombra do texto */
+}
+
+/* Estilos para os subtítulos dentro do cabeçalho */
+header h3 {
+    color: #fcb91293; /* Cor do texto */
+    font-family: 'EB Garamond'; /* Define a fonte */
+    font-size: 44px; /* Tamanho da fonte */
+}
+
+/* Estilos para os parágrafos dentro do cabeçalho */
+header p {
+    font-size: 38px; /* Tamanho da fonte */
+    font-family: 'Allura', sans-serif; /* Define a fonte */
+    text-shadow: 1px 1px rgba(21, 150, 255, 0.959); /* Sombra do texto */
+}
+
+body img {
+    margin-bottom: -5px;
+    align-items: center;
+}
+
+body img {
+    transition: transform 0.3s;
+}
+    
+body img:hover {
+    transform: scale(1.6);
+}
+
+/* Estilos para os títulos da seção de restaurante */
+#restaurant h1 {
+    color: #333; /* Cor do texto */
+    font-size: 42px; /* Tamanho da fonte */
+    margin-top: 10px; /* Margem superior */
+    text-shadow: 1px 1px rgba(21, 150, 255, 0.959); /* Sombra do texto */
+}
+
+/* Estilos para os parágrafos da seção de restaurante */
+#restaurant p {
+    font-size: 22px; /* Tamanho da fonte */
+    margin-top: 10px; /* Margem superior */
+}
+
+/* Estilos para a seção principal */
+#main {
+    text-align: center; /* Centraliza o texto */
+}
+
+#main h3 {
+    margin-top: 20px;
+    font-size: 42px;
+    
+}
+
+/* Estilos para os títulos e parágrafos na seção principal */
+#main h3, #main p {
+    color: aliceblue; /* Cor do texto */
+}
+
+/* Estilos para o rodapé */
+footer {
+    text-align: center; /* Centraliza o texto */
+    margin-top: 50px; /* Margem superior */
+}
+
+/* Estilos para os ícones sociais dentro do rodapé */
+footer .socialIcons img {
+    margin-top: 50px; /* Margem superior */
+    width: 30px; /* Largura da imagem */
+}
+
+/* Estilos para o aviso de direitos autorais */
+footer .copyright {
+    margin-top: 10px;
+    color: #fcb91293; /* Cor do texto */
+    font-size: 20px; /* Tamanho da fonte */
+}
+
+

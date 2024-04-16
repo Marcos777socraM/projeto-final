@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoroHitzsRestaurante</title>
+    <link rel="stylesheet" href="/css/siderBar.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+        }
+
+        section {
+            max-width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: aliceblue;
+            overflow: auto; /* Adicionado para habilitar a rolagem vertical, se necessário */
+        }
+
+        h2, h3 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .menu-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            flex-wrap: wrap; /* Adicionado para que os grupos de menu quebrem em uma nova linha em telas menores */
+        }
+
+        .group-menu {
+            text-align: center;
+            width: 30%;
+            margin-bottom: 20px; /* Adicionado para separação entre os grupos de menu */
+            flex-grow: 1; /* Adicionado para que os grupos de menu ocupem o espaço disponível */
+        }
+
+        select {
+            padding: 8px;
+            margin-top: 10px;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        .social-icons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+        }
+        .button {
+            margin-top: 15px;
+        }
+        .button a {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 20px;
+            color: goldenrod;
+            background-color: #630000;
+            border: 3px solid goldenrod;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .button a:hover {
+            background-color: #ffd700;
+            color: #630000;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .group-menu {
+                width: 100%; /* Altera a largura para 100% em telas menores */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1><sub>BoroHitzs</sub></h1>
+        <div class="img">
+            <img src="/assets/svg/hot.svg" alt="">
+            <img src="/assets/svg/hot.svg" alt="">
+            <img src="/assets/svg/hot.svg" alt="">
+        </div>
+        <h3>Restaurante</h3>
+        <p>Cuisine from Heavens</p>
+    </header>
+    <nav>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="/html/index.html">Restaurante</a>
+            <a href="/html/especialidades.html">Especialidades</a>
+            <a href="politicasDeAcesso.html">Políticas do Site</a>
+        </div>
+        <div id="main">
+            <button class="openbtn" onclick="openNav()">☰ Menu</button>
+        </div>
+    </nav>
+    <section>
+        <h2>Menu para Grupos</h2>
+        <div class="menu-container">
+            <div class="group-menu">
+                <h3>Opção 1: Menu Italiano</h3>
+                <select id="group1">
+                    <option value="500">Para 10 pessoas: R$500</option>
+                    <option value="950">Para 20 pessoas: R$950</option>
+                    <option value="1350">Para 30 pessoas: R$1350</option>
+                </select>
+                <ul>
+                    <li><h3>Entrada: Bruschetta</h3>
+                        <p>Uma fatia de pão italiano grelhado coberto com tomates frescos, manjericão e azeite.</p>
+                    </li>
+                    <li><h3>Prato Principal: Lasanha à Bolonhesa</h3>
+                        <p>Camadas de massa de lasanha, queijo e um molho de carne à bolonhesa, cozido até ficar borbulhante e dourado.</p>
+                    </li>
+                    <li><h3>Sobremesa: Tiramisu</h3>
+                        <p>Uma sobremesa italiana clássica feita com camadas de biscoitos embebidos em café e uma mistura cremosa de queijo mascarpone, coberto com cacau em pó.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="group-menu">
+                <h2>Opção 2: Menu Francês</h2>
+                <select id="group2">
+                    <option value="600">Para 10 pessoas: R$600</option>
+                    <option value="1150">Para 20 pessoas: R$1150</option>
+                    <option value="1650">Para 30 pessoas: R$1650</option>
+                </select>
+                <ul>
+                    <li><h3>Entrada: Quiche Lorraine</h3>
+                        <p>Uma torta salgada originária da região de Lorraine, na França, recheada com bacon, queijo e ovos.</p>
+                    </li>
+                    <li><h3>Prato Principal: Coq au Vin</h3>
+                        <p>Um prato francês tradicional de frango cozido lentamente em vinho tinto com cogumelos e cebolas pequenas.</p>
+                    </li>
+                    <li><h3>Sobremesa: Crème Brûlée</h3>
+                        <p>Uma sobremesa cremosa de baunilha coberta com uma camada de açúcar caramelizado.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="group-menu">
+                <h2>Opção 3: Menu Brasileiro</h2>
+                <select id="group3">
+                    <option value="400">Para 10 pessoas: R$400</option>
+                    <option value="750">Para 20 pessoas: R$750</option>
+                    <option value="1050">Para 30 pessoas: R$1050</option>
+                    
+                </select>
+                <ul>
+                    <li><h3>Entrada: Pão de Queijo</h3>
+                        <p>Pequenos pães redondos feitos de polvilho e queijo, originários do estado de Minas Gerais.</p>
+                    </li>
+                    <li><h3>Prato Principal: Feijoada Completa</h3>
+                        <p>Um ensopado de feijão preto com carne de porco, servido com arroz, couve refogada, farofa e laranja.</p>
+                    </li>
+                    <li><h3>Sobremesa: Brigadeiro</h3>
+                        <p>Docinhos brasileiros feitos de leite condensado, chocolate em pó e manteiga, enrolados em granulado de chocolate.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div class="button">
+        <a href="/html/reservas.html">Faça Sua Reserva</a>
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://pt-pt.facebook.com/"><img src="/assets/svg/facebook.svg" alt="facebook"></a>
+            <a href="https://www.tiktok.com/"><img src="/assets/svg/tiktok.svg" alt="tiktok"></a>
+            <a href="https://www.youtube.com/"><img src="/assets/svg/youtube.svg" alt="youtube"></a>
+        </div>
+        <div class="copyright">
+            Copyright © 2024 BoroHitzs. Todos os direitos reservados.
+        </div>
+    </footer>
+    <script src="/js/sideBar.js"></script>
+</body>
+</html>
